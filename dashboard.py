@@ -27,12 +27,10 @@ menu = st.sidebar.radio(
     ("1. SLA Breach Rate (Skala Kelumpuhan)", "2. Root Cause (Seller vs Carrier)")
 )
 
-st.title("📦 Uji Stres Logistik Olist E-Commerce (Q4 2017)")
+st.title("Uji Stres Logistik pada Data Set E-Commerce (Q4 2017)")
 st.markdown("Dashboard ini menyajikan analisis risiko operasional terkait lonjakan keterlambatan pengiriman selama periode *Black Friday* dan *Holiday Season*.")
 
-# =========================================================
-# HALAMAN 1: FREKUENSI & SKALA KELUMPUHAN
-# =========================================================
+
 if menu == "1. SLA Breach Rate (Skala Kelumpuhan)":
     st.header("1. Skala Kelumpuhan Sistem Logistik")
     
@@ -68,7 +66,7 @@ if menu == "1. SLA Breach Rate (Skala Kelumpuhan)":
     st.pyplot(fig)
 
     # KESIMPULAN DARI USER
-    st.markdown("### 📌 Kesimpulan Analisis")
+    st.markdown("### Kesimpulan Analisis")
     st.markdown("""
     Berdasarkan dari frekuensi kegagalan estimasi pengiriman dan analisis tingkat keparahan keterlambatannya, kita bisa lihat konklusi bisnis yang kritis dimana Black Friday dapat dilihat sebagai kegagalan sistemik akibat secara fundamental yang kurang baik pada kurir.
 
@@ -77,9 +75,7 @@ if menu == "1. SLA Breach Rate (Skala Kelumpuhan)":
     Hipotesis bahwa "Desember telat murni karena libur Natal" terbantahkan secara kualitas. Meskipun frekuensi pesanan telat menurun di Desember (seperti temuan di grafik pertama), tingkat keparahannya justru mencapai puncak tertinggi di akhir Desember (Dec W4+), di mana 38,7% pesanan telat mengalami extreme delay dengan rata-rata telat hampir 11 hari. Menggambarkan bahwa logistik ini tidak benar-benar pulih setelah BF, antrean paket (backlog) mengendap dan langsung ditimpa oleh Holday Season.
     """)
 
-# =========================================================
-# HALAMAN 2: ROOT CAUSE ANALYSIS
-# =========================================================
+
 elif menu == "2. Root Cause (Seller vs Carrier)":
     st.header("2. Analisis Akar Masalah: Internal vs Eksternal")
     
@@ -115,8 +111,8 @@ elif menu == "2. Root Cause (Seller vs Carrier)":
     
     st.pyplot(fig2)
 
-    # KESIMPULAN DARI USER
-    st.markdown("### 📌 Kesimpulan Analisis")
+
+    st.markdown("### Kesimpulan Analisis")
     st.markdown("""
     Kehancuran keterlambatan estimasi pengiriman pada Black Friday 2017 murni dipicu oleh inelastisitas kapasitas logistik eksternal (Carrier), bukan kelalaian penjual (Seller). Saat sistem dihantam shock volume, tingkat kegagalan pengiriman oleh kurir meroket eksponensial dari baseline 3% menjadi 20,2%, sementara seller menunjukkan resiliensi operasional dengan kenaikan keterlambatan yang lebih tertahan di angka 16-17%. 
     
