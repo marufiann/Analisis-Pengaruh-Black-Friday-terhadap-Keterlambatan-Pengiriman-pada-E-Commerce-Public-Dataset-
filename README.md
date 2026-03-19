@@ -25,10 +25,18 @@ Anda dapat mengakses dashboard tersebut melalui tautan berikut:
 Pastikan Anda telah menginstal Python di sistem Anda. Proyek ini membutuhkan beberapa *library* utama seperti Pandas, Matplotlib, Seaborn, dan Streamlit.
 
 ## Setup Environment - Anaconda
+```
 conda create --name ecommerce-env python=3.14.2
 conda activate ecommerce-env
+```
+
+##Install Requirements untuk Analisis Data ini
+```
 pip install -r requirements.txt
+```
 
 ## Run Streamlit App
+```
 cd dashboard
 streamlit run dashboard.py
+```
