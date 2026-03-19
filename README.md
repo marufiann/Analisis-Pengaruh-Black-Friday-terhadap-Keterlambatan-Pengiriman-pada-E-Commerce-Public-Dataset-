@@ -19,14 +19,16 @@ Anda dapat mengakses dashboard tersebut melalui tautan berikut:
 * **Kegagalan Sistemik Eksternal:** Krisis logistik Black Friday murni dipicu oleh inelastisitas kapasitas ekspedisi (Carrier), dengan tingkat kegagalan melonjak dari baseline 3% menjadi 20,23%.
 * **The Handover Illusion:** Seller menunjukkan resiliensi operasional yang jauh lebih baik. Lonjakan rasio keterlambatan seller lebih banyak diakibatkan oleh *pick-up failure* dari pihak armada logistik yang mengalami *overcapacity*.
 
-## 🛠️ Instalasi & Cara Menjalankan Secara Lokal
+## Instalasi & Cara Menjalankan Secara Lokal
 
 ### Prasyarat
 Pastikan Anda telah menginstal Python di sistem Anda. Proyek ini membutuhkan beberapa *library* utama seperti Pandas, Matplotlib, Seaborn, dan Streamlit.
 
-### Langkah Eksekusi
-1. Buka Terminal atau Command Prompt
-2. Navigasikan ke direktori utama proyek (submission): cd path/to/submission
-3. Install semua dependencies yang dibutuhkan: pip install -r requirements.txt
-4. cd dashboard
-5. Jalankan aplikasi Streamlit: streamlit run dashboard.py
+## Setup Environment - Anaconda
+conda create --name ecommerce-env python=3.14.2
+conda activate ecommerce-env
+pip install -r requirements.txt
+
+## Run Streamlit App
+cd dashboard
+streamlit run dashboard.py
